@@ -206,7 +206,7 @@ section#photo img {
 }
 /* Social Media Links on mouse hover */
 .social a:hover {
-  background-color: darkred;
+  background-color: rgb(129, 236, 29);
   color: rgb(205, 73, 73);
   -webkit-transition: background-color 0.6s ease-out, color 0.6s ease-out;
   -moz-transition: background-color 0.6s ease-out, color 0.6s ease-out;
