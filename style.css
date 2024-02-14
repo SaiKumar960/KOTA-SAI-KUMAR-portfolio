@@ -54,27 +54,54 @@ nav.index ul li{
 
 }
 
-nav.index ul  a{
+nav.index ul a {
   color: #fff;
-  text-decoration: none;
+  text-decoration:gold;
   font-size: 18px;
-
   display: flex;
-  
   position: relative;
-  
+  animation: bounce 2s infinite alternate; /* Add the bounce animation */
+  transition: color 0.3s ease; /* Add color transition */
 }
+
+/* Colorful hover effect */
+nav.index ul a:hover {
+  color: #0afc97; /* Change to your desired hover color */
+  text-shadow: 0 0 19px #fff; /* Add a glowing effect */
+  transform: rotate(360deg); /* Rotate the tab */
+}
+
+@keyframes bounce {
+  2% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(-10px); /* Adjust the bounce height as desired */
+  }
+}
+
+
 nav.index  li a::after{
   content: '';
   width: 100;
   height: 3px;
-  background:#9f2e2e ;
+  background:#051dfc ;
   position:absolute;
   left: 0;
-  bottom: -6px;
-  transition: 0.5s;
+  bottom: -10px;
+  transition: 0.10s;
   
 }
+
+nav.index li a:hover::after{
+  /* Change the background color to a gradient */
+  background: linear-gradient(to right, #ff0000, #ff9900, #ffff00, #00ff00, #0000ff, #9900ff, #ff00ff);
+  /* Add a box-shadow to create a glow effect */
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  /* Add a transform to create a smoke effect */
+  transform: skewX(-20deg) translateX(20px);
+}
+
 nav.index  li a:hover::after{
   width: 100%;
 
